@@ -1,0 +1,414 @@
+*{
+   margin:0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Popins', sans-serif;
+   text-decoration: none;
+   list-style: none;
+  
+}
+
+.header
+{
+position: fixed;
+left: 0;
+top:0;
+width: 100%;
+padding: 15px 15%;
+display: flex; /* sabit kalmasını sağlıyor */
+justify-content: space-between; /* aralarında boşluk oluşmasını sağlar */ 
+align-items: center;
+z-index: 100;
+
+}
+.header::before
+{
+    content: '';
+    position: absolute; /*belirlenen header içinde pozisyonlanmasını sağlıyor*/ 
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    z-index: -1;
+ 
+}
+.logo
+{
+    font-size: 25px;
+    color: white;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+.logo:hover
+{
+    color:orangered;
+    text-shadow: 0 0 25px orangered,
+                 0 0 50px orangered ;
+                 transform: scale(1,1);
+}
+
+span
+{
+        color: #50f9dd;
+}
+
+.navbar a
+{
+    font-size: 18px;
+    color:#BDD3DE;
+    font-size: 500;
+    margin:0 20px;
+    border-bottom: 3px solid transparent;
+    transition: 0.3 ease;
+}
+.navbar a:hover,
+.navbar a.active
+{
+    color:#BDD3DE;
+    border-bottom: 3px solid orangered;
+
+}
+.contact
+{
+    padding: 10px 28px;
+    background-color: #FF8F00;
+    color: black;
+    border: 2px solid transparent;
+    border-radius:8px ;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transform: 03. ease ;
+
+}
+.contact:hover
+{
+    background: #00ADB5;
+    box-shadow: 0  0 25px #a9afb0;
+    color: white;
+
+}
+/* Home içeren kısımlarda ilk sayfanın yazı, görseli gibi şeyler belirtilmiştir.  */
+.home
+{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(#001e36,#186694,#92fefe);
+    display: flex;
+    align-items: center;
+    gap: 7em;
+    padding: 30px 12% ;
+}
+
+.home.content
+{
+    max-width: 800px;
+   
+}
+.home.content h3
+{
+font-size: 62px;
+}
+.home.content h1
+{
+    font-size:82px ;
+    line-height: 1.2;
+}
+.home.content p
+{
+    font-size: 30px;
+    margin: 25px 0 30px;
+}
+/* Buton box ile genel kodları verilim sonra 1 2 şeklinde ayrılarak özellikler ayrıntılı eklenmiştir. hover ile de efekt verilmiştir. */
+.btn-box
+{
+    width: 345px;
+    display: flex;
+    gap: 2em;
+}
+.btn-1
+{
+    margin-top: 10px;
+    padding: 15px 28px;
+    background-color: #00ADB5;
+    color: black;
+    border:2px solid transparent;
+    border-radius: 8px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: 0.3 ease;
+    cursor: pointer;
+    border-radius: 15px 10px 15px 10px;
+}
+.btn-1:hover
+{
+    background-color: #FF8F00;
+    color:black;
+    border: 2px solid black;
+}
+.btn-2
+{
+    margin-top: 10px;
+    padding: 15px 20px;
+    background-color: #FF8F00;
+    color:black;
+    border:2px solid transparent;
+    border-radius: 8px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: 0.3 ease;
+    cursor: pointer;
+    border-radius: 10px 15px 10px 15px;
+}
+.btn-2:hover
+{
+    background-color: #00ADB5;
+    color: black;
+}
+.img-box img
+{
+    border-radius: 20%;
+    width: 550px;
+    height: 450px;
+    opacity: 60%;
+    box-shadow: 0 0 70px black,
+                0 0 90px green;
+            
+}
+.img-box img:hover
+{
+    box-shadow: 0px 3px 12px 0px #ccc;
+	border: 5px solid transparent;
+}
+/* webkit kısmı ile sayfanın yanında bulunana kaydırma çubuğunun genişliği kalılığı renk tonu ayarlanmıştır.  */
+::-webkit-scrollbar
+{
+    width: 15px;
+}
+::-webkit-scrollbar-thumb
+{
+    background-color: #BDD3DE;
+
+}
+::-webkit-scrollbar-track
+{
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 50px;
+}
+/* Bu kısım 3. sayfa için belitilen kodlardır */
+/* About kısmında resim, yazıllar ve arka plan kısımları belirtilmiştir. */
+.about
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:  12% 8;
+    background: black;
+    gap: 10em; /* satır arasında ki boşluğu sağlar */
+    min-height: 100vh;
+}
+.about-img img
+{
+    position: relative;
+    width: 550px;
+    box-shadow: 0 0 25px #00ADB5, 
+                0 0 50px #00ADB5;    
+     border-radius: 20%;
+     margin-left: 35px;
+}
+
+.about-content h2
+{
+text-align: left;
+color:white;
+font-size: 42px;
+}
+.about-content h3
+{
+    font-size:32px ;
+    color: white;
+}
+.about-content p
+{
+    color: white;
+    font-size: 20px;
+    margin: 2em 0 3em;
+    padding-right: 13px; 
+}
+/* About kısmında bulunan sosyal medya platformlarının kodları belirtilmiştir.  */
+.home-sci a
+{
+ position: relative; /* öğrenin içindeki haraketi sağlıyor*/
+display: inline-flex; /* içeriğin alt alta dizilmesini sağlar */
+justify-content: center; /* Bu özellik, içindeki öğeleri sağa ve sola eşit mesafede olacak şekilde ortalar.*/
+align-items: center;
+width: 40px;
+height: 40px;
+background: transparent;
+border: 2px solid #00abf0;
+border-radius: 50%;
+font-size:20px;
+color:#00abf0;
+text-decoration: none;
+z-index: 1; /* sayfada yazılacak yeri belirtir*/
+overflow: hidden;
+transition: .5s;
+margin-right: 15px;
+}
+
+.home-sci a:hover
+{
+color:#081b29;
+}
+/* Education end Certificate kısmının kodları belirtilmiştir. */
+.container{
+	width: 100%;
+	padding: 35px 10%;
+    padding-right: calc(10% - 30px);
+}
+main.row{
+	display: grid;
+	grid-template-columns: 1fr 1fr; /* sütun özelliklerini belirlemeye yarar */ 
+	grid-column-gap: 20px;
+}
+.col{
+    background-color: #6DA5C0;
+    
+}
+.col header.title{
+	font-family: helvetica;
+	color: black;
+	padding: 10px 0px 10px 30px;
+}
+.col .contents{
+	padding: 0px 30px;
+	border-left: 2px solid black;
+}
+.col .contents .box{
+	position: relative;
+	padding: 20px;
+	border: 1px solid #eaeaea;
+	background-color: #ffffff;
+	cursor: pointer;
+	transition: all 0.4s;
+	margin-bottom: 20px;
+}
+.col .contents .box:hover{
+	box-shadow: 0px 3px 12px 0px #ccc;
+	border: 1px solid transparent;
+}
+.col .contents .box::before{
+	content: '';
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	right: calc(100% + 22px);
+	top: 0;
+	background-color: #FF8F00;
+	border: 2px solid white;
+}
+.box h4{
+	position: relative;
+    color:  #003840;
+	
+}
+.box h3{
+	font-size: 19px;
+	padding: 10px 0px 6px;
+	font-family: helvetica;
+	color: #444;
+}
+.box p{
+	line-height: 1.2;
+	color: #666;
+	font-size: 17px;
+}
+/* Sayfa sonunda bulunan footer kısmı belirtilmiştir. */
+.footer-section
+{
+    background: linear-gradient(#001e36,#666);
+    color:white;
+    margin: 15px;
+    border-radius: 15px 15px 15px 15px;
+
+}
+.copyright
+{
+   font-size: 20    px;
+   margin-left: 350px;
+   color: #00ADB5;
+}
+ /* Burada belirtilen üç kod başlığı navbar resposive olması için yazılmıştır fakat hata vermiştir. Düzeltildikten sonra domain alınmalıdır. */
+/* .icons
+{
+    right: 5%;
+    position: absolute;
+    font-size: 2.8rem;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+#check 
+{
+    display: none;
+} */
+/* @media(max-width: 992px){
+    .header {
+        padding: 1.3rem 5%;
+    }
+    .icons{
+        display: inline-flex;
+    }
+    #check:checked~.icons #close-icon
+    {
+        display: black;
+    }
+    .icons #close-icon 
+    {
+        display: none;
+    }
+    .navbar {
+        position: absolute;
+        top:100%;
+        left:0;
+        width: 100%;
+       height: 0;
+        background: rgba(0, 0, 0, .1);
+        backdrop-filter: blur(50px);
+        box-shadow: 0 .5rem 1 rem rgba(0, 0, 0, .1);
+        overflow: hidden;
+        transition: .3s ease;
+    }
+    #check:checked~.navbar 
+{
+    height: 17.7rem;
+}
+    .navbar a{
+        display: block;
+        font-size: 1.1rem;
+        margin: 1.5rem 0;
+        text-align: center;
+        transform: translateY(-50px);
+        transition: .3s ease;
+    }
+    #check:checked~.navbar a
+    {
+        transform: translateY(0);   
+     }
+} */
+/* Sayfa mediası , nasıl görüneceğine ait bilgiler içermektedir. */
+@media(max-width: 992px){
+	main.row{
+		grid-template-columns: 1fr;
+	}
+	.row .col:nth-child(2){
+		margin-top: 30px;
+	}
+   
+}
+
